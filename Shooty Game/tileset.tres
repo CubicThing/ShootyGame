@@ -1,0 +1,74 @@
+[gd_resource type="TileSet" load_steps=7 format=2]
+
+[ext_resource path="res://wall.png" type="Texture" id=1]
+
+[sub_resource type="OccluderPolygon2D" id=1]
+
+closed = true
+cull_mode = 1
+polygon = PoolVector2Array( -32, -32, 32, -32, 32, 32, -32, 32 )
+_sections_unfolded = [ "Resource" ]
+
+[sub_resource type="RectangleShape2D" id=2]
+
+custom_solver_bias = 0.0
+extents = Vector2( 32.0669, 32.1178 )
+
+[sub_resource type="StreamTexture" id=3]
+
+flags = 4
+load_path = "res://.import/wall.png-e3261c66ad83b71f524576fb4f3c7b5b.stex"
+
+[sub_resource type="StreamTexture" id=4]
+
+flags = 4
+load_path = "res://.import/ground.png-19dd19062ae149a099889071e7b87881.stex"
+
+[sub_resource type="OccluderPolygon2D" id=5]
+
+closed = true
+cull_mode = 0
+polygon = PoolVector2Array( 0, 0, 0, 10, 10, 10, 10, 0 )
+
+[resource]
+
+0/name = "wall"
+0/texture = SubResource( 3 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 64, 64 )
+0/is_autotile = false
+0/occluder_offset = Vector2( 32, 32 )
+0/occluder = SubResource( 1 )
+0/navigation_offset = Vector2( 32, 32 )
+0/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"shape": SubResource( 2 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 31.8637, 32.2416 )
+} ]
+1/name = "ground"
+1/texture = SubResource( 4 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 0, 0, 64, 64 )
+1/is_autotile = false
+1/occluder_offset = Vector2( 32, 32 )
+1/navigation_offset = Vector2( 32, 32 )
+1/shapes = [  ]
+2/name = "wallbarred"
+2/texture = ExtResource( 1 )
+2/tex_offset = Vector2( 0, 0 )
+2/modulate = Color( 1, 1, 1, 1 )
+2/region = Rect2( 0, 0, 64, 64 )
+2/is_autotile = false
+2/occluder_offset = Vector2( 32, 32 )
+2/occluder = SubResource( 5 )
+2/navigation_offset = Vector2( 32, 32 )
+2/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"shape": SubResource( 2 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
+} ]
+
